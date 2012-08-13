@@ -1,0 +1,19 @@
+{
+	"name" : "好基友",
+	"version" : "1.0.0",
+	"description" : "微博一键转发到人人",
+	"icons" : {
+		"48": "icon.png"
+	},
+	"permissions" : ["http://*/*","tabs"],
+  	"background": {
+    	"scripts": ["background.js"]
+ 	 },
+	"content_scripts":[
+		{
+			"matches":["http://*.weibo.com/*", "http://*.t.cn/*", "http://weibo.sina.com.cn/*"],
+			"js":["contentscript.js"]
+		}
+	],
+	"manifest_version": 2
+}
